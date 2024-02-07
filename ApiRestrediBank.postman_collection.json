@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "d4fdc1cf-2b6c-4ad7-baf6-f585cbf4cd31",
+		"name": "ApiRestrediBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17272246",
+		"_collection_link": "https://warped-capsule-995118.postman.co/workspace/New-Team-Workspace~3bb02da6-094e-48f4-b0c0-f2c6885a8270/collection/17272246-d4fdc1cf-2b6c-4ad7-baf6-f585cbf4cd31?action=share&source=collection_link&creator=17272246"
+	},
+	"item": [
+		{
+			"name": "Tarjeta emitir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProducto\": 123456,\r\n    \"nombreTitular\": \"Alejandro Muñoz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tarjetas/emitir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarjetas",
+						"emitir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tarjeta Activar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tarjetas/activar/1234561234567890123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarjetas",
+						"activar",
+						"1234561234567890123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tarjeta Bloquear",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tarjetas/1234561234567890123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarjetas",
+						"1234561234567890123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tarjeta recargar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"saldoRecarga\": 10000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/recargar/1234561234567890123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recargar",
+						"1234561234567890123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransaccionesCompra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroTarjeta\": \"1234561234567890123456\",\r\n    \"monto\": 100.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transacciones/realizarCompra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones",
+						"realizarCompra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener transacción por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transacciones/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Anular transacción",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transacciones/anular/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacciones",
+						"anular",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
