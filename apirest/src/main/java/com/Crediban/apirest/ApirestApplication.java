@@ -1,13 +1,13 @@
-package com.apirestcrediban.backend;
+package com.Crediban.apirest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackendApplication {
+public class ApirestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackendApplication.class, args);
+		SpringApplication.run(ApirestApplication.class, args);
 	}
 
 }
